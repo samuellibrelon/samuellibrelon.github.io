@@ -16,7 +16,7 @@ body {
 }
 
 .frame .div {
-    background-color: #141c26;
+    /*background-color: #141c26;*/
     width: 100%; /* Preenche toda a largura da tela */
     min-height: 100vh; /* Garante que ocupa pelo menos a altura da tela */
     position: relative; /* Para permitir posicionamento absoluto dos filhos */
