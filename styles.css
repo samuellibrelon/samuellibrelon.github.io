@@ -1,0 +1,170 @@
+/*deixar o código mais responsível:
+-substituindo os px por %
+criar as páginas embaixo
+...*/
+body {
+    background: linear-gradient(to bottom, #141c26, #2e3b4e); /* Gradiente de cor */
+    margin: 0; /* Remove margens padrão do body */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+}
+
+.frame {
+    display: flex;
+    flex-direction: column; /* Permite que a div se expanda para baixo */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 100%;
+}
+
+.frame .div {
+    background-color: #141c26;
+    width: 100%; /* Preenche toda a largura da tela */
+    min-height: 100vh; /* Garante que ocupa pelo menos a altura da tela */
+    position: relative; /* Para permitir posicionamento absoluto dos filhos */
+}
+
+.frame .samuel-librelon {
+    position: absolute;
+    width: 957px;
+    top: 410px;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o deslocamento para centralizar */
+    font-family: "Inconsolata";
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 128px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+  .frame .text-wrapper {
+    font-weight: 700;
+    font-family: "Inconsolata";
+  }
+  
+  .frame .span {
+    font-family: "Alegreya SC", Helvetica;
+    font-weight: 700;
+  }
+  
+  .frame .text-wrapper-2 {
+    font-family: "EB Garamond";
+    font-style: italic;
+  }
+  
+  .frame .FULL-STACK-DEVELOPER {
+    position: absolute;
+    width: 877px;
+    top: 558px;
+    left: 482px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .p {
+    display: flex;
+    position: fixed;
+    top: 68px;
+    left: 38px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+    color: transparent;
+    gap: 5px; /* Ajuste o valor para controlar a distância entre partes */
+}
+
+.frame .text-wrapper-3 {
+    color: #69e0f5;
+}
+
+.frame .text-wrapper-4 {
+    color: #ffffff;
+}
+
+.frame .text-wrapper-5 {
+    color: #cd76df;
+    animation: blink 1s steps(1) infinite; /* Animação para fazer o sublinhado piscar */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1; /* Visível */
+    }
+    50% {
+        opacity: 0; /* Invisível */
+    }
+    100% {
+        opacity: 1; /* Visível novamente */
+    }
+}
+
+  .frame .text-wrapper-6 {
+    position: fixed;
+    width: 86px;
+    top: 75px;
+    left: 582px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .text-wrapper-7 {
+    position: fixed;
+    width: 145px;
+    top: 75px;
+    left: 704px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .text-wrapper-8 {
+    position: fixed;
+    width: 161px;
+    top: 75px;
+    left: 1009px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .text-wrapper-9 {
+    position: fixed;
+    width: 133px;
+    top: 75px;
+    left: 1206px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .text-wrapper-10 {
+    position: fixed;
+    width: 88px;
+    top: 75px;
+    left: 885px;
+    font-family: "Inconsolata", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
