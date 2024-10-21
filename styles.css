@@ -1,6 +1,7 @@
 /*deixar o código mais responsível:
 -substituindo os px por %
 criar as páginas embaixo
+-colocar box fixa embaixo do cabeçalho
 ...*/
 body {
     background: linear-gradient(to bottom, #141c26, #2e3b4e); /* Gradiente de cor */
@@ -64,8 +65,13 @@ body {
     letter-spacing: 0;
     line-height: normal;
   }
-  
-  .frame .p {
+  .header {
+    display: flex;
+    flex-direction: column; /* Permite que a div se expanda para baixo */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 100%;
+  }
+  .header .p {
     display: flex;
     position: fixed;
     top: 68px;
@@ -78,15 +84,15 @@ body {
     gap: 5px; /* Ajuste o valor para controlar a distância entre partes */
 }
 
-.frame .text-wrapper-3 {
+.header .text-wrapper-3 {
     color: #69e0f5;
 }
 
-.frame .text-wrapper-4 {
+.header .text-wrapper-4 {
     color: #ffffff;
 }
 
-.frame .text-wrapper-5 {
+.header .text-wrapper-5 {
     color: #cd76df;
     animation: blink 1s steps(1) infinite; /* Animação para fazer o sublinhado piscar */
 }
@@ -103,7 +109,7 @@ body {
     }
 }
 
-  .frame .text-wrapper-6 {
+  .header .text-wrapper-6 {
     position: fixed;
     width: 86px;
     top: 75px;
@@ -116,7 +122,7 @@ body {
     line-height: normal;
   }
   
-  .frame .text-wrapper-7 {
+  .header .text-wrapper-7 {
     position: fixed;
     width: 145px;
     top: 75px;
@@ -129,7 +135,7 @@ body {
     line-height: normal;
   }
   
-  .frame .text-wrapper-8 {
+  .header .text-wrapper-8 {
     position: fixed;
     width: 161px;
     top: 75px;
@@ -142,7 +148,7 @@ body {
     line-height: normal;
   }
   
-  .frame .text-wrapper-9 {
+  .header .text-wrapper-9 {
     position: fixed;
     width: 133px;
     top: 75px;
@@ -155,7 +161,7 @@ body {
     line-height: normal;
   }
   
-  .frame .text-wrapper-10 {
+  .header .text-wrapper-10 {
     position: fixed;
     width: 88px;
     top: 75px;
