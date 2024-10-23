@@ -1,7 +1,7 @@
 /*deixar o código mais responsível:
 -substituindo os px por %
 criar as páginas embaixo
--colocar box fixa embaixo do cabeçalho
+-colocar center-title
 ...*/
 body {
     background: linear-gradient(to bottom, #141c26, #2e3b4e); /* Gradiente de cor */
@@ -24,65 +24,116 @@ body {
 }
 
 .frame .samuel-librelon {
-    position: absolute;
-    width: 957px;
-    top: 410px;
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta o deslocamento para centralizar */
-    font-family: "Inconsolata";
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 128px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
+  position: relative; /* Evita o uso de position absolute */
+  width: 90vw; /* Usa 90% da largura da viewport para ser responsivo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  top: 30vh; /* Usa uma porcentagem da altura da viewport para espaçar */
+  font-family: "Inconsolata";
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 8vw; /* Tamanho da fonte responsivo com base na largura da viewport */
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap; /* Evita quebra de linha */
+  text-align: center; /* Centraliza o texto */
 }
-  
-  .frame .text-wrapper {
-    font-weight: 700;
-    font-family: "Inconsolata";
+
+.frame .text-wrapper {
+  font-weight: 700;
+  font-family: "Inconsolata";
+}
+
+.frame .span {
+  font-family: "Alegreya SC", Helvetica;
+  font-weight: 700;
+}
+
+.frame .text-wrapper-2 {
+  font-family: "EB Garamond";
+  font-style: italic;
+}
+
+.frame .FULL-STACK-DEVELOPER {
+  position: relative; /* Evita o uso de position absolute */
+  top: 30vh;
+  width: 66vw; /* Usa 66% da largura da viewport */
+  margin: 0px auto; /* Centraliza horizontalmente com espaçamento */
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 1vw; /* Tamanho da fonte responsivo */
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: left; /* Centraliza o texto */
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+  .frame .samuel-librelon {
+    font-size: 8vw; /* Ajusta o tamanho da fonte em telas menores */
+    top: 15vh;
   }
-  
-  .frame .span {
-    font-family: "Alegreya SC", Helvetica;
-    font-weight: 700;
-  }
-  
-  .frame .text-wrapper-2 {
-    font-family: "EB Garamond";
-    font-style: italic;
-  }
-  
+
   .frame .FULL-STACK-DEVELOPER {
-    position: absolute;
-    width: 877px;
-    top: 558px;
-    left: 482px;
-    font-family: "Montserrat";
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
+    font-size: 4vw; /* Ajusta o tamanho da fonte em telas menores */
+    width: 80vw;
   }
+}
+
+@media (max-width: 480px) {
+  .frame .samuel-librelon {
+    font-size: 6vw; /* Tamanho da fonte ainda menor para dispositivos móveis */
+    top: 10vh;
+  }
+
+  .frame .FULL-STACK-DEVELOPER {
+    font-size: 5vw;
+    width: 90vw;
+  }
+}
+
   .header {
-    display: flex;
-    flex-direction: column; /* Permite que a div se expanda para baixo */
-    align-items: center; /* Centraliza o conteúdo */
-    width: 100%;
+    position: fixed; /* Fixa o header no topo */
+    top: 0; /* Alinha o header ao topo da página */
+    left: 0; /* Alinha o header à esquerda da página */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 10vh; /* 10% da altura da viewport */
+    background-color: #141c26; /* Cor de fundo */
+    display: flex; /* Flexbox para organizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
   }
-  .header .p {
+  
+  .header .name {
     display: flex;
-    position: fixed;
-    top: 68px;
-    left: 38px;
+    align-items: center; /* Centraliza verticalmente os itens */
     font-family: "Inconsolata", Helvetica;
     font-weight: 700;
     font-size: 32px;
     line-height: normal;
     color: transparent;
-    gap: 5px; /* Ajuste o valor para controlar a distância entre partes */
-}
+    gap: 5px; /* Espaçamento entre os itens */
+    position: relative; /* Posiciona relativamente em vez de fixar */
+    margin-left: 30px; /* Margem para afastar do canto esquerdo */
+  }
+  
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+    .header .name {
+      font-size: 24px; /* Reduz o tamanho da fonte em telas menores */
+      margin-left: 10px; /* Reduz o espaçamento à esquerda */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header .name {
+      font-size: 18px; /* Ainda menor em telas pequenas */
+      margin-left: 5px; /* Menor margem em telas muito pequenas */
+    }
+  }
 
 .header .text-wrapper-3 {
     color: #69e0f5;
@@ -108,69 +159,37 @@ body {
         opacity: 1; /* Visível novamente */
     }
 }
+ /* Contêiner flexível para centralizar o conteúdo */
+.header .navigation {
+  display: flex;
+  gap: 30px; /* Espaçamento entre os itens */
+}
 
-  .header .text-wrapper-6 {
-    position: fixed;
-    width: 86px;
-    top: 75px;
-    left: 582px;
-    font-family: "Inconsolata", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
+/* Estilos para os links de navegação */
+.header .navigation {
+  font-family: "Inconsolata", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Efeito de transição */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.header .navigation:hover {
+  color: #69e0f5; /* Muda para azul ao passar o mouse */
+}
+
+  /* Estilos para telas menores */
+  @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .header .text-wrapper-7 {
-    position: fixed;
-    width: 145px;
-    top: 75px;
-    left: 704px;
-    font-family: "Inconsolata", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
+
+  .header .navigation {
+    flex-direction: column;
+    gap: 15px;
   }
-  
-  .header .text-wrapper-8 {
-    position: fixed;
-    width: 161px;
-    top: 75px;
-    left: 1009px;
-    font-family: "Inconsolata", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .header .text-wrapper-9 {
-    position: fixed;
-    width: 133px;
-    top: 75px;
-    left: 1206px;
-    font-family: "Inconsolata", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .header .text-wrapper-10 {
-    position: fixed;
-    width: 88px;
-    top: 75px;
-    left: 885px;
-    font-family: "Inconsolata", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
+}
   
