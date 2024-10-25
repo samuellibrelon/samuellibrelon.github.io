@@ -15,16 +15,27 @@ body {
 
 .frame .center-title {
   text-align: center;
+  flex-direction: column;  /* Empilha os elementos verticalmente */
+  align-items: center;     /* Centraliza horizontalmente os itens */
+  justify-content: center; /* Centraliza verticalmente os itens */
 }
 
 .frame .samuel-librelon {
+  display: flex; /* Para os itens dentro do p também serem flexíveis */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
   font-family: "Inconsolata";
   font-weight: 400;
   color: #ffffff;
   font-size: 8vw;
-  margin: 0 auto;
-  white-space: nowrap;
-  text-align: center;
+  margin: 0; /* Remove a margem para que fiquem colados */
+  white-space: nowrap; /* Evita quebra de linha */
+}
+
+.frame .samuel-librelon span {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
 .frame .text-wrapper {
@@ -110,6 +121,42 @@ body {
 
 .header .navigation div:hover {
   color: #69e0f5;
+}
+
+.main-title h2 {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content p,
+.main-content ul,
+.main-content li {
+  font-size: 1.1em;
+  color: #cccccc;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+#expertise, #work, #experience, #contact, #education {
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.social-icons {
+  display: flex;           /* Alinha os ícones horizontalmente */
+  gap: 20px;              /* Espaçamento entre os ícones */
+  align-items: center;     /* Alinha verticalmente ao centro */
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 100%;            /* Ocupa toda a largura disponível */
+}
+
+.social-icons img {
+  width: 48px;            /* Largura fixa */
+  height: 48px;           /* Altura fixa */
+  object-fit: contain;    /* Mantém a proporção da imagem */
 }
 
 /* Media Queries */
