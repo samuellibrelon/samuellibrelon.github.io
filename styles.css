@@ -118,6 +118,16 @@ body {
   cursor: pointer;  /* Muda o cursor para mãozinha */
 }
 
+.menu-button {
+  display: none !important; /* Força o botão a ficar escondido */
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
 .header .navigation div {
   transition: color 0.3s ease;
 }
@@ -166,12 +176,47 @@ body {
 @media (max-width: 768px) {
   .frame .samuel-librelon { font-size: 8vw; top: 15vh; }
   .frame .FULL-STACK-DEVELOPER { font-size: 4vw; width: 80vw; }
-  .header { flex-direction: column; align-items: center; }
+  .header { flex-direction: column; align-items: center;height: 8vw; }
   .header .navigation { flex-direction: column; gap: 15px; }
 }
 
 @media (max-width: 480px) {
-  .frame .samuel-librelon { font-size: 6vw; top: 10vh; }
-  .frame .FULL-STACK-DEVELOPER { font-size: 5vw; width: 90vw; }
-  .header .name { font-size: 18px; margin-left: 5px; }
+  .frame .samuel-librelon { font-size: 10vw; top: 10vh; }
+  .frame .FULL-STACK-DEVELOPER { font-size: 2vw; width: 90vw; }
+  .header .name { font-size: 3vw; margin-left: 5px; }
+}
+@media screen and (max-width: 768px) {
+  /* Estilo para o botão do menu hamburguer */
+  .menu-button {
+    display: block !important; /* Agora sim mostra o botão */
+    background-color: #2e3b4e;
+    display: block;
+    cursor: pointer;
+    width: 50px; /* Ajuste a largura conforme necessário */
+    height: 32px; /* Ajuste a altura conforme necessário */
+    position: absolute; /* Permite posicionar o botão */
+    top: 0px; /* Distância do topo */
+    right: 0px; /* Distância da direita */
+    border: none; /* Remove borda, se necessário */
+    border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional para destaque */
+    font-size: 12px;
+  }
+  
+  .header .navigation {
+    display: none; /* Esconde a navegação normal */
+    position: fixed;
+    top: 60px; /* Ajuste conforme necessário */
+    right: 0;
+    background: #000000; /* ou sua cor de fundo */
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    width: 200px; /* Largura do menu */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .header .navigation.active {
+    display: flex; /* Mostra quando ativo */
+  }
 }
