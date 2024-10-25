@@ -1,17 +1,31 @@
-// script.js
-// Função para carregar mais conteúdo ao rolar
-const loadMoreContent = () => {
-    const newSection = document.createElement('section');
-    newSection.classList.add('container', 'my-5');
-    newSection.innerHTML = `
-        <h2>Mais Conteúdo</h2>
-        <p>Conteúdo que foi carregado ao rolar...</p>
-    `;
-    document.body.appendChild(newSection);
-};
 
-/*window.addEventListener('scroll', () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        loadMoreContent();
+// Observador para carregar mais conteúdo quando o usuário rola até o final da página
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            loadMoreContent();
+        }
+    });
+}, { threshold: 1.0 });
+
+// Elemento de "ponto de referência" para ativar o carregamento
+const sentinel = document.createElement('div');
+sentinel.classList.add('sentinel');
+document.body.appendChild(sentinel);
+observer.observe(sentinel);
+
+// Função para descer a página até o conteúdo clicado
+function scrollToSection(sectionID) {
+    const section = document.getElementById(sectionID);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
     }
-});*/   
+}
+
+// Eventos de clique para rolar até a seção correspondente
+document.querySelector('.name').addEventListener('click', () => scrollToSection('home'));
+document.querySelector('.home').addEventListener('click', () => scrollToSection('home'));
+document.querySelector('.expertise').addEventListener('click', () => scrollToSection('expertise'));
+document.querySelector('.work').addEventListener('click', () => scrollToSection('work'));
+document.querySelector('.experience').addEventListener('click', () => scrollToSection('experience'));
+document.querySelector('.contact').addEventListener('click', () => scrollToSection('contact'));
