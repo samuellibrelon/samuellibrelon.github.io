@@ -160,7 +160,7 @@ body {
 
 .social-icons {
   display: flex;           /* Alinha os ícones horizontalmente */
-  gap: 20px;              /* Espaçamento entre os ícones */
+  gap: 30px;              /* Espaçamento entre os ícones */
   align-items: center;     /* Alinha verticalmente ao centro */
   justify-content: center; /* Centraliza horizontalmente */
   width: 100%;            /* Ocupa toda a largura disponível */
