@@ -86,6 +86,7 @@ body {
   color: transparent;
   gap: 5px;
   margin-left: 30px;
+  cursor: pointer;  /* Muda o cursor para mãozinha */
 }
 
 .header .text-wrapper-3 {
@@ -108,11 +109,13 @@ body {
 
 .header .navigation {
   display: flex;
-  gap: 30px;
+  gap: 22px;
   font-family: "Inconsolata", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
+  white-space: nowrap; /* Evita quebra de linha */
+  cursor: pointer;  /* Muda o cursor para mãozinha */
 }
 
 .header .navigation div {
@@ -139,7 +142,7 @@ body {
   text-align: justify;
 }
 
-#expertise, #work, #experience, #contact, #education {
+#expertise, #projects, #experience, #contact, #education, #about-me {
   padding: 20px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);

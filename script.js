@@ -23,10 +23,11 @@ function scrollToSection(sectionID) {
 }
 
 // Eventos de clique para rolar até a seção correspondente
-document.querySelector('.name').addEventListener('click', () => scrollToSection('home'));
 document.querySelector('.home').addEventListener('click', () => scrollToSection('home'));
-document.querySelector('.education').addEventListener('click', () => scrollToSection('education'));
-document.querySelector('.expertise').addEventListener('click', () => scrollToSection('expertise'));
-document.querySelector('.work').addEventListener('click', () => scrollToSection('work'));
-document.querySelector('.experience').addEventListener('click', () => scrollToSection('experience'));
+document.querySelector('.name').addEventListener('click', () => scrollToSection('home'));
+document.querySelector('.about-me').addEventListener('click', () => scrollToSection('about-me'));
+document.querySelector('.expertise').addEventListener('click', () => scrollToSection('about-me'));
+document.querySelector('.experience').addEventListener('click', () => scrollToSection('expertise'));
+document.querySelector('.education').addEventListener('click', () => scrollToSection('experience'));
+document.querySelector('.projects').addEventListener('click', () => scrollToSection('education'));
 document.querySelector('.contact').addEventListener('click', () => scrollToSection('contact'));
