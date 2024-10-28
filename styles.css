@@ -117,6 +117,15 @@ body {
   white-space: nowrap; /* Evita quebra de linha */
   cursor: pointer;  /* Muda o cursor para mãozinha */
 }
+.language-switcher {
+  position: fixed;
+  top: 60px;
+  right: 2vh;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;  /* Muda o cursor para mãozinha */
+}
+
 
 .menu-button {
   display: none !important; /* Força o botão a ficar escondido */
@@ -178,12 +187,14 @@ body {
   .frame .FULL-STACK-DEVELOPER { font-size: 4vw; width: 80vw; }
   .header { flex-direction: column; align-items: center;height: 8vw; }
   .header .navigation { flex-direction: column; gap: 15px; }
+  .header .language-switcher {top: 0%; right: 15%;}
 }
 
 @media (max-width: 480px) {
   .frame .samuel-librelon { font-size: 10vw; top: 10vh; }
   .frame .FULL-STACK-DEVELOPER { font-size: 2vw; width: 90vw; }
   .header .name { font-size: 3vw; margin-left: 5px; }
+  .header .language-switcher {top: 0%; right: 15%;}
 }
 @media screen and (max-width: 768px) {
   /* Estilo para o botão do menu hamburguer */
