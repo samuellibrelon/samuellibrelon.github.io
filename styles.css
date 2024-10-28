@@ -166,6 +166,66 @@ body {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
 }
+.mouse {
+  width: 25px; /* Define a largura do elemento .mouse */
+  height: 36px; /* Define a altura do elemento .mouse */
+  border-radius: 15px; /* Arredonda as bordas do elemento .mouse */
+  border: 2px solid #ECECEC; /* Define uma borda sólida de 2px com a cor #ECECEC */
+  cursor: auto; /* Muda o cursor para um ponteiro quando o mouse passa sobre o elemento */
+  position: absolute; /* Define a posição como absoluta para facilitar o posicionamento */
+  left: 50%; /* Posiciona o lado esquerdo do elemento no centro da tela */
+  bottom: 20px; /* Define a distância do fundo da tela */
+  transform: translateX(-50%); /* Centraliza o elemento horizontalmente */
+}
+
+.mouse > div {
+  display: block; /* Exibe os filhos como blocos */
+  margin: 6px auto; /* Define uma margem superior e inferior de 6px e centraliza horizontalmente */
+  width: 3px; /* Define a largura dos filhos */
+  height: 6px; /* Define a altura dos filhos */
+  border-radius: 4px; /* Arredonda as bordas dos filhos */
+  background: #ECECEC; /* Define a cor de fundo dos filhos */
+
+  /* Propriedades de animação */
+  animation-duration: 2s; /* Define a duração da animação */
+  animation-name: scroll; /* Define o nome da animação */
+  animation-iteration-count: infinite; /* Faz com que a animação se repita infinitamente */
+}
+
+
+/* Definição da animação scroll */
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  10% {
+    opacity: 1; /* Fica visível */
+    -webkit-transform: translateY(0px); /* Sem movimento vertical */
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0; /* Torna-se invisível novamente */
+    -webkit-transform: translateY(10px); /* Move para baixo */
+    transform: translateY(10px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  10% {
+    opacity: 1; /* Fica visível */
+    -webkit-transform: translateY(0px); /* Sem movimento vertical */
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0; /* Torna-se invisível novamente */
+    -webkit-transform: translateY(10px); /* Move para baixo */
+    transform: translateY(10px);
+  }
+}
+
 
 .social-icons {
   display: flex;           /* Alinha os ícones horizontalmente */
