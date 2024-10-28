@@ -145,6 +145,8 @@ html {
 }
 .language-switcher {
   position: fixed;
+  width: "25";
+  height: "18";
   top: 10px;
   right: 9vh;
   display: flex;
@@ -275,31 +277,53 @@ html {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .frame .samuel-librelon { font-size: 8vw; top: 15vh; }
-  .frame .FULL-STACK-DEVELOPER { font-size: 4vw; width: 80vw; }
-  .header { flex-direction: column; align-items: center;height: 8vw; }
-  .header .navigation { flex-direction: column; gap: 15px; }
-  .header .language-switcher {top: 0%; right: 15%;}
-}
-
-@media (max-width: 480px) {
-  .frame .samuel-librelon { font-size: 10vw; top: 10vh; }
-  .frame .FULL-STACK-DEVELOPER { font-size: 2vw; width: 90vw; }
-  .header .name { font-size: 3vw; margin-left: 5px; }
-  .header .language-switcher {top: 0%; right: 15%;}
-}
-@media screen and (max-width: 768px) {
+  /* Frame elements */
+  .frame .samuel-librelon {
+    font-size: 8vw;
+    top: 15vh;
+  }
+  
+  .frame .FULL-STACK-DEVELOPER {
+    font-size: 4vw;
+    width: 80vw;
+  }
+  
+  /* Header elements */
+  .header {
+    flex-direction: row;
+    align-items: flex-start; /* 'left' não é um valor válido para align-items */
+    height: 8vw;
+    padding: 10px 15px; /* Melhor adaptação para telas menores */
+  }
+  
+  .header .name {
+    font-size: 4vw;
+    margin-left: 5px; /* Aumentado um pouco para melhor espaçamento */
+    margin-top: 10px;
+  }
+  
+  .header .navigation {
+    flex-direction: column;
+    gap: 12px; /* Reduzido um pouco para melhor compactação */
+  }
+  
+  .header .language-switcher {
+    top: 0;
+    right: 15%;
+    width: 5px; /* Corrigido: removidas as aspas */
+    height: 5px; /* Corrigido: removidas as aspas */
+  }
   /* Estilo para o botão do menu hamburguer */
   .menu-button {
     display: block !important; /* Agora sim mostra o botão */
     background-color: #2e3b4e;
     display: block;
     cursor: pointer;
-    width: 50px; /* Ajuste a largura conforme necessário */
-    height: 32px; /* Ajuste a altura conforme necessário */
+    width: 40px; /* Ajuste a largura conforme necessário */
+    height: 22px; /* Ajuste a altura conforme necessário */
     position: absolute; /* Permite posicionar o botão */
-    top: 0px; /* Distância do topo */
-    right: 0px; /* Distância da direita */
+    top: 3.5px; /* Distância do topo */
+    right: 3px; /* Distância da direita */
     border: none; /* Remove borda, se necessário */
     border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional para destaque */
@@ -321,5 +345,36 @@ html {
 
   .header .navigation.active {
     display: flex; /* Mostra quando ativo */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Frame elements */
+  .frame .samuel-librelon {
+    font-size: 10vw;
+    top: 10vh;
+  }
+  
+  .frame .FULL-STACK-DEVELOPER {
+    font-size: 3vw; /* Aumentado um pouco para melhor legibilidade */
+    width: 90vw;
+  }
+  
+  /* Header elements */
+  .header {
+    padding: 8px 10px; /* Ajustado para telas muito pequenas */
+  }
+  
+  .header .name {
+    font-size: 4.5vw; /* Ligeiramente maior para melhor legibilidade */
+    margin-left: 2px;
+    margin-top: -5px;
+  }
+  
+  .header .language-switcher {
+    top: 0;
+    right: 30%; /* Ajustado para melhor posicionamento em telas menores */
+    width: 5px;
+    height: 5px;
   }
 }
