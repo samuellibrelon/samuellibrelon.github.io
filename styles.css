@@ -195,7 +195,7 @@ html {
   text-align: justify;
 }
 
-#expertise, #projects, #experience, #contact, #education, #about-me {
+#expertise, #projects, #experience, #contact, #education, #about-me, #certifications {
   padding: 20px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);

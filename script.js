@@ -31,6 +31,7 @@ document.querySelector('.expertise').addEventListener('click', () => scrollToSec
 document.querySelector('.experience').addEventListener('click', () => scrollToSection('experience'));
 document.querySelector('.education').addEventListener('click', () => scrollToSection('education'));
 document.querySelector('.projects').addEventListener('click', () => scrollToSection('projects'));
+document.querySelector('.certifications').addEventListener('click', () => scrollToSection('certifications'));
 document.querySelector('.contact').addEventListener('click', () => scrollToSection('contact'));
 
 // JavaScript para controlar o menu
